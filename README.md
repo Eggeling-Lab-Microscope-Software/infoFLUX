@@ -225,9 +225,7 @@ $$
 - **input**: any positive ``float`` value. The unit is **seconds**.
 - **effect**: Sets the total amount of time spent during a full ``TCP`` scan-cylce of the current iteration. Each spot of the TCP, excluding the center (only used if the [ccr-check](#ccrlimit) is enabled) will be scanned for a time equal to:
   
-  $$
-  t_{spot} = \frac{patDwellTime}{\Psi}
-  $$
+  $$t_{spot} = \frac{patDwellTime}{\Psi}$$
 
   Where $\Psi \in\natnums$ is the number of vertices of the ``TCP`` (e.g. 3 - triangle/fast, 6 - hexagon).
 
