@@ -227,7 +227,7 @@ $$
   
   $$t_{spot} = \frac{patDwellTime}{\Psi}$$
 
-  Where $`\Psi \in\natnums`$ is the number of vertices of the ``TCP`` (e.g. 3 - triangle/fast, 6 - hexagon).
+  Where $\Psi \in \natnums$ is the number of vertices of the ``TCP`` (e.g. 3 - triangle/fast, 6 - hexagon).
 
 - **source**: Abberior GmbH (personal communication, 2022)
 - **hacks**:
