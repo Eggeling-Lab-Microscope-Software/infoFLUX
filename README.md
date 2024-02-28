@@ -2,6 +2,11 @@
 A compilation of all knowledge I can find on the technical side of MINFLUX.
 
 ## What is to come ?
+### Repository-wise
++ A portal for discussions
++ issue templates
+
+### Content-wise
 + Completion of the MINFLUX sequence parameters
 + Completion of the MINFLUX data fields
 + Description of how the iterative MINFLUX impletementation operates
@@ -41,6 +46,8 @@ In here go all the creative ways you found to utilize the parameter in question 
 # Table of Contentes
 - [infoFLUX](#infoflux)
   - [What is to come ?](#what-is-to-come-)
+    - [Repository-wise](#repository-wise)
+    - [Content-wise](#content-wise)
   - [How to contribute:](#how-to-contribute)
     - [Weird behavior and observations](#weird-behavior-and-observations)
     - [Deep Insights](#deep-insights)
