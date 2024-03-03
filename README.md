@@ -96,7 +96,6 @@ In here go all the creative ways you found to utilize the parameter in question 
     - [``phDiaAU``](#phdiaau)
     - [``strategy``](#strategy)
 - [MINFLUX data fields](#minflux-data-fields)
-  - [How to contribute:](#how-to-contribute-1)
   - [Global fields](#global-fields)
     - [``act``](#act)
     - [``dos``](#dos)
@@ -149,8 +148,17 @@ Default values have been extracted from the `Tracking_2D_Oct2022` sequence. And 
 - **Nested block of instructions that control each individual sequence.**
   
 ### ``bgcSense``
+- **default**: ``false``
+- **value**: any ``integer`` (tested 0-10) and ``false`` for the **off**-state.
+- **effect**: Determins if and how many times the background level is gauge during the current iteration. If the value is higher than ``1``/``true``, the results will *probably* be averaged. If the value is set to ``0``, the background level is not gauged at all. This is especially useful when working with samples that have a high background signal, e.g. due to autofluorescence or a high concentration of fluorescent dyes.
+- **source**: Francesco Reina (personal communication, 2022)
+- **hacks**:  ``unknown``
 
 ### ``ctrDwellFactor``
+- **default**: 0.16
+- **value**: any positive ``float``
+- **effect**: Controls the fraction of the [``patDwellTime``](#patdwelltime) that is spent on the center frequency check. It is useful to set aside a time similar to the individual spot dwell time to ensure a reliable center frequency check. Keep in mind that the center frequency check is only performed if the [``ccrLimit``](#ccrlimit) is set to a positive value and that it will slow down the measurement by a time equal to [``ctrDwellFactor``](#ctrdwellfactor) times [``patDwellTime``](#patdwelltime) **PER** iteration.
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 
 ### ``damping``
 - **default**: 2
@@ -183,7 +191,7 @@ Default values have been extracted from the `Tracking_2D_Oct2022` sequence. And 
 - **default**: ``{'show': ['loc']}``
 - **value**: Any from **['cfr', 'dcr', 'eco', 'efo', 'itr', 'lnc', 'loc', 'sta', 'tid', 'tim']**
 - **effect**: Display a liveview of the current MINFLUX measurement with the set parameters as color axis.
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``locLimit``
@@ -310,16 +318,19 @@ $$
 
 ### ``patGeoFactor``
 - **value**: any positive ``float`` value.
-- **effect**: Controls the TCP diameter. The exact way it is calculated is currently ``unknown``, but we know of the following correspondences: 
-  - ``patGeoFactor`` = 0.28 <-> TCP diameter = 100 nm
-  - ``patGeoFactor`` = 0.42 <-> TCP diameter = 150 nm
+- **effect**: Controls the TCP diameter. 
+  - The used diameter caluclates as follows:
+  $$\text{TCP diameter} = \text{patGeoFactor} \cdot 360\text{nm}$$
+  * The following values are known to be used:
+    - ``patGeoFactor`` = 0.28 <-> TCP diameter = 100 nm
+    - ``patGeoFactor`` = 0.42 <-> TCP diameter = 150 nm
 - **source**: Abberior GmbH (personal communication, 2022)
 - **hacks**: A smaller TCP forces a smaller area of photon collection thereby limiting the spatial localization error. However, the risk of losing any non fixated particles rises significantly with smaller collection-tolerances. 
 
 ### ``patRepeat``
 - **value**: any positive ``integer`` or ``0`` for the off state. Probably ``-1`` works as well.
 - **effect**: Sets the maximum number the current iteration step is repeated in case of unsuccessful particle localization. The break criterium is most likely ONLY the case when an insufficiet number of photons (<[photon imit](#phtlimit)) is collected during an entire TCP cycle, taking [dwell time](#patdwelltime) seconds. Be aware that setting ``patRepeat`` to zero breaks the sequence as it apparently turns off the iteration entirely (``Tested`` by Agnes Koerfer). A possible cause could be that the ``0`` is interpreted as a ``boolean`` rather than an ``integer``.
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``phtLimit``
@@ -331,13 +342,13 @@ $$
 ### ``pwrFactor``
 - **value**: any positive ``integer`` but given as a ``float``. 
 - **effect**: This parameter probably affects the excitation laser power during hte current iteration. However, it is ``unknown`` in what exact way this is done.
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``wavelength``
 - **value**: any positive ``float``.
 - **effect**: Probably addresses the wavelength used for excitation. However, it is unclear if this parameter changes due to the laser selected via *Imspector* during measurements. Thus, it is possible that the value listed here is just a default.
-- **source**: Jonathan Alvelid, Bela Vogler
+- **source**: Jonatan Alvelid, Bela Vogler
 - **hacks**: ``unknown``
 
 
@@ -346,7 +357,7 @@ $$
 ### ``dim``
 - **value**: any positive ``integer`` from ``{2,3}``. Untested if it takes other values.
 - **effect**: Set the spatial (Euclidean) dimension in which to perform the localization.
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``dmod``
@@ -376,7 +387,7 @@ $$
 ### ``id``
 - **value**: any ``string``, e.g. ```["prbt", "pt3d", "mxax", "mx13", "mflx"]```.
 - **effect**: Set the name of the corresponding iteration. 
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``modulated``
@@ -388,13 +399,13 @@ $$
 ### ``pattern``
 - **value**: any ``string`` referencing presets ```["hexagon", "square", "octagon", "triangle", "zline", "zline2"]```.
 - **effect**: Set or reference the scan pattern, thus the number of vertices within the TCP and correspondingly the grometry of the area or volume that is used for collecting photons.
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``phDiaAU``
 - **value**: any positive ``float``, e.g. ```[1.5, 1.6]```.
 - **effect**: Set or reference the pinhole size in Airy Units (AU).
-- **source**: Jonathan Alvelid
+- **source**: Jonatan Alvelid
 - **hacks**: ``unknown``
 
 ### ``strategy``
@@ -411,24 +422,6 @@ In the following, we will list:
 * any known hacks
 
 As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value`` pairings, it is little to no wonder that exported files share a similar structure. It seems like data generated by each iteration is dumped into a ``python dictionary``, which can later be saved as either ``.json`` or ``.npy``. All known data fields are listed in alphabetical order within their nesting layer.
-
-## How to contribute:
-Should you see any parameter field with the ``unknown`` tag or where information you have differ from the version portrayed here, please, ***open an issue***. Put the parameter of change as the subject and fill out the following template in order to contribute:
-```markdown
-# SUBJECT: The parameter in question.
-# Main:
-value:
-State what values can be passed to the parameter.
-
-Effect: 
-Describe the impact the parameter has on the behavior of the MINFLUX. Also mention any special values like `-1` for an "off"-state
-
-Source: 
-State the source of your knowledge in the "Vancouver" citation style. As this is a work in progress, we are also happy with "personal experience", but would be more than happy to see it backed by data.
-
-Hacks:
-In here go all the creative ways you found to utilize the parameter in question for your own measurements, i.e. you found a way to make use of the changed behavior beyond the intended use. This is especially interest in the light of 'unlocking' the system.
-```
 
 ## Global fields
 
