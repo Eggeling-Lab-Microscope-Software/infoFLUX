@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use the technical iinformation of this report, please cite it as below."
+authors:
+- family-names: "Vogler"
+  given-names: "Bela Tristan Leander"
+  orcid: "https://orcid.org/0000-0002-5598-5738"
+title: "infoFLUX"
+version: 0.0.9
+doi: -
+date-released: 2024-03-21
+url: "https://github.com/Eggeling-Lab-Microscope-Software/infoFLUX"

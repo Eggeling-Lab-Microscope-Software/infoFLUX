@@ -1,133 +1,69 @@
-# infoFLUX
+# infoFLUX <!-- omit from toc -->
 A compilation of all knowledge I can find on the technical side of MINFLUX.
 
-## What is to come ?
+## Using *infoFLUX*
+You are welcome to use and contribute to infoFLUX following the guidelines presented below. Should you use the contents of this repository, **please cite *infoFLUX* and its contributors accordingly.**
+
+## What is to come ? <!-- omit from toc -->
+### In general
+After completing this repository, we aim to archive it and acquire a Zenodo doi for it. After that point in time, it becomes citable and all **contributors of major changes will be listed as authors** of this repository.
 ### Repository-wise
-+ A portal for discussions
-+ issue templates
++ [x] A portal for discussions
++ [ ] Issue templates
 
 ### Content-wise
-+ Completion of the MINFLUX sequence parameters
-+ Completion of the MINFLUX data fields
-+ Description of how the iterative MINFLUX impletementation operates
-+ A guide on how to use the MINFLUX sequence parameters to optimize your measurements
-+ Detailed discussion on MINFLUX time resolution
++ [x] Collection of MINFLUX sequence parameters
++ [x] Collection of MINFLUX data field descriptions
++ [ ] List of known MINFLUX hardware
++ [ ] A discussion on limiting factors and expectation horizons
++ [ ] A discussion of how the iterative MINFLUX impletementation operates
++ [ ] A guide on how to use the MINFLUX sequence parameters to optimize your measurements
 
-## How to contribute:
+## What to contribute:
 ### Weird behavior and observations
 Should you come across any unexpected or noteworthy behavior that is **reproducible**, please, share your experience. You can do so either by opening an issue or by contacting me directly. I will then add your observation to the list of known hacks and give you credit for your contribution.
 
 ### Deep Insights
-To all the experienced users and dataminers that might come across this repository: Please, share your knowledge. I am particularly interested in the following:
+To all the experienced users and dataminers that might come across this repository; **Please, share your knowledge.** Topics of interest include but are not limited to:
 - The exact way the ``estCoeff`` are calculated and how they are used in the localization process.
 - If and how raw photon counts can be extracted from the MINFLUX system.
 - How sequence files are parsed and how the MINFLUX system is controlled.
 - How MINFLUX responds to losing a particle during a measurement, more precisely, hwo the system decides to start a new cycle and where it jumps.
 - The programmatical way to access the MINFLUX system and how to control it. Any news on the API front or effective hacks to control the system from the outside are highly appreciated.
 
-### Parameters and Data fields
-Should you see any parameter or data field with the ``unknown`` tag or where information you have differs from the version portrayed here, please, ***open an issue***. Reference the subject of change and fill out the following template in order to contribute:
+## How to contribute:
+### Contribution Policy (Content)
+This is a community project without a validating insitution, as of now. Any contribution will have to be **opened as an issue first** and will be implemented only after screening and discussion.  
+
+In general, should you come across any information that collides with your experience, observations or knowledge, we are happy to hear from you. **Please, open an issue and fill the following template.**
+
+In case of typos or other minor contributions, please, open a pull request and it will be implemented shortly. 
+### Template (temporary)
 ```markdown
 # SUBJECT: The parameter in question.
 # Main:
-Value:
-State what values can be passed to the parameter.
+**Value:**
+*State what values can be passed to the parameter.*
 
-Effect: 
-Describe the impact the parameter has on the behavior of the MINFLUX. Also mention any special values like `-1` for an "off"-state
+**Effect: **
+*Describe the impact the parameter has on the behavior of the MINFLUX. Also mention any special values like `-1` for an "off"-state.*
 
-Source: 
-State the source of your knowledge in the "Vancouver" citation style. As this is a work in progress, we are also happy with "personal experience", but would be more than happy to see it backed by data.
+**Source: **
+*State the source of your knowledge in the "Vancouver" citation style. As this is a work in progress, we are also happy with "personal experience", but would be more than happy to see it backed by data.*
 
-Hacks:
-In here go all the creative ways you found to utilize the parameter in question for your own measurements, i.e. you found a way to make use of the changed behavior beyond the intended use. This is especially interest in the light of 'unlocking' the system.
+**Hacks:**
+*In here go all the creative ways you found to utilize the parameter in question for your own measurements, i.e. you found a way to make use of the changed behavior beyond the intended use. This is especially interest in the light of 'unlocking' the system.*
 ```
 
-# Table of Contentes
-- [infoFLUX](#infoflux)
-  - [What is to come ?](#what-is-to-come-)
-    - [Repository-wise](#repository-wise)
-    - [Content-wise](#content-wise)
-  - [How to contribute:](#how-to-contribute)
-    - [Weird behavior and observations](#weird-behavior-and-observations)
-    - [Deep Insights](#deep-insights)
-    - [Parameters and Data fields](#parameters-and-data-fields)
-- [Table of Contentes](#table-of-contentes)
+# Table of Contentes <!-- omit from toc -->
 - [MINFLUX sequence parameters](#minflux-sequence-parameters)
   - [Global parameters](#global-parameters)
-    - [`Itr`](#itr)
-    - [``bgcSense``](#bgcsense)
-    - [``ctrDwellFactor``](#ctrdwellfactor)
-    - [``damping``](#damping)
-    - [``defaultField``](#defaultfield)
-    - [`field`](#field)
-    - [`headstart`](#headstart)
-    - [``id``](#id)
-    - [``liveview``](#liveview)
-    - [``locLimit``](#loclimit)
-    - [``maxOffTime``](#maxofftime)
-    - [``stickiness``](#stickiness)
   - [``Itr`` (Iteration)](#itr-iteration)
-    - [``Mode``](#mode)
-    - [``_lemn``](#_lemn)
-    - [``_lemd``](#_lemd)
-    - [``bgcThreshold``](#bgcthreshold)
-    - [``ccrLimit``](#ccrlimit)
-    - [``estCoeff``](#estcoeff)
-    - [``estCoeffA``](#estcoeffa)
-    - [``estCoeffL``](#estcoeffl)
-    - [``field``](#field-1)
-    - [``fldFactor``](#fldfactor)
-    - [``patDwellTime``](#patdwelltime)
-    - [``patGeoFactor``](#patgeofactor)
-    - [``patRepeat``](#patrepeat)
-    - [``phtLimit``](#phtlimit)
-    - [``pwrFactor``](#pwrfactor)
-    - [``wavelength``](#wavelength)
   - [``Mode`` (Mode)](#mode-mode)
-    - [``dim``](#dim)
-    - [``dmod``](#dmod)
-    - [``dpsf``](#dpsf)
-    - [``emod``](#emod)
-    - [``epsf``](#epsf)
-    - [``id``](#id-1)
-    - [``modulated``](#modulated)
-    - [``pattern``](#pattern)
-    - [``phDiaAU``](#phdiaau)
-    - [``strategy``](#strategy)
 - [MINFLUX data fields](#minflux-data-fields)
   - [Global fields](#global-fields)
-    - [``act``](#act)
-    - [``dos``](#dos)
-    - [``gri``](#gri)
-    - [``itr``](#itr-1)
-    - [``sky``](#sky)
-    - [``sqi``](#sqi)
-    - [``tid``](#tid)
-    - [``tim``](#tim)
-    - [``vld``](#vld)
   - [``itr`` (iteration)](#itr-iteration-1)
-    - [``cfr``](#cfr)
-    - [``dcr``](#dcr)
-    - [``dmz``](#dmz)
-    - [``ecc``](#ecc)
-    - [``eco``](#eco)
-    - [``efc``](#efc)
-    - [``efo``](#efo)
-    - [``eox``](#eox)
-    - [``eoy``](#eoy)
-    - [``ext``](#ext)
-    - [``fbg``](#fbg)
-    - [``gvx``](#gvx)
-    - [``gvy``](#gvy)
-    - [``itr``](#itr-2)
-    - [``lcx``](#lcx)
-    - [``lcy``](#lcy)
-    - [``lcz``](#lcz)
-    - [``lnc``](#lnc)
-    - [``loc``](#loc)
-    - [``sta``](#sta)
-    - [``tic``](#tic)
+
 
 # MINFLUX sequence parameters
 In this section, we are going explore:
@@ -191,7 +127,7 @@ Default values have been extracted from the `Tracking_2D_Oct2022` sequence. And 
 - **default**: ``{'show': ['loc']}``
 - **value**: Any from **['cfr', 'dcr', 'eco', 'efo', 'itr', 'lnc', 'loc', 'sta', 'tid', 'tim']**
 - **effect**: Display a liveview of the current MINFLUX measurement with the set parameters as color axis.
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``locLimit``
@@ -265,9 +201,9 @@ $$
     ]
   ]
   ``` 
-- **effect**: ``unknown`` 
-- **source**: ``unknown`` 
-- **hacks**:``unknown`` 
+- **effect**: Coefficients used in the position estimation. They are generated by Abberior using a simulated version of their MINFLUX 3D system. Apparently, they are effected by the photon limit and dwell time (``subject of discussion``).
+- **source**: Abberior Instruments (Personal Communication, 2022)
+- **hacks**:``unknown``
 
 ### ``estCoeffA``
 - **value**: 
@@ -321,16 +257,18 @@ $$
 - **effect**: Controls the TCP diameter. 
   - The used diameter caluclates as follows:
   $$\text{TCP diameter} = \text{patGeoFactor} \cdot 360\text{nm}$$
-  * The following values are known to be used:
-    - ``patGeoFactor`` = 0.28 <-> TCP diameter = 100 nm
-    - ``patGeoFactor`` = 0.42 <-> TCP diameter = 150 nm
+  * The following values are known to be used in tracking:
+    |``patGeoFactor``|Diameter|Usecase
+    |---|---|---|
+    |0.28|100 nm|2D tracking
+    |0.42|150 nm|2D tracking
 - **source**: Abberior GmbH (personal communication, 2022)
 - **hacks**: A smaller TCP forces a smaller area of photon collection thereby limiting the spatial localization error. However, the risk of losing any non fixated particles rises significantly with smaller collection-tolerances. 
 
 ### ``patRepeat``
 - **value**: any positive ``integer`` or ``0`` for the off state. Probably ``-1`` works as well.
 - **effect**: Sets the maximum number the current iteration step is repeated in case of unsuccessful particle localization. The break criterium is most likely ONLY the case when an insufficiet number of photons (<[photon imit](#phtlimit)) is collected during an entire TCP cycle, taking [dwell time](#patdwelltime) seconds. Be aware that setting ``patRepeat`` to zero breaks the sequence as it apparently turns off the iteration entirely (``Tested`` by Agnes Koerfer). A possible cause could be that the ``0`` is interpreted as a ``boolean`` rather than an ``integer``.
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``phtLimit``
@@ -342,13 +280,15 @@ $$
 ### ``pwrFactor``
 - **value**: any positive ``integer`` but given as a ``float``. 
 - **effect**: This parameter probably affects the excitation laser power during hte current iteration. However, it is ``unknown`` in what exact way this is done.
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``wavelength``
 - **value**: any positive ``float``.
 - **effect**: Probably addresses the wavelength used for excitation. However, it is unclear if this parameter changes due to the laser selected via *Imspector* during measurements. Thus, it is possible that the value listed here is just a default.
-- **source**: Jonatan Alvelid, Bela Vogler
+- **source**: 
+  - Jonatan Alvelid (Personal communication, Jan 2024)
+  - Bela Vogler
 - **hacks**: ``unknown``
 
 
@@ -357,7 +297,7 @@ $$
 ### ``dim``
 - **value**: any positive ``integer`` from ``{2,3}``. Untested if it takes other values.
 - **effect**: Set the spatial (Euclidean) dimension in which to perform the localization.
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``dmod``
@@ -387,7 +327,7 @@ $$
 ### ``id``
 - **value**: any ``string``, e.g. ```["prbt", "pt3d", "mxax", "mx13", "mflx"]```.
 - **effect**: Set the name of the corresponding iteration. 
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``modulated``
@@ -399,13 +339,13 @@ $$
 ### ``pattern``
 - **value**: any ``string`` referencing presets ```["hexagon", "square", "octagon", "triangle", "zline", "zline2"]```.
 - **effect**: Set or reference the scan pattern, thus the number of vertices within the TCP and correspondingly the grometry of the area or volume that is used for collecting photons.
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``phDiaAU``
 - **value**: any positive ``float``, e.g. ```[1.5, 1.6]```.
 - **effect**: Set or reference the pinhole size in Airy Units (AU).
-- **source**: Jonatan Alvelid
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
 
 ### ``strategy``
@@ -426,184 +366,204 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 ## Global fields
 
 ### ``act``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: ``Boolean``
+- **content**: States if the activation laser has been used during the localization. This is potentially only useful for imaging applications.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``dos``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``.
+- **content**: ``unknown``
+- **source**: ``unknown``
+- **hacks**: ``unknown``
 
 ### ``gri``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``.
+- **content**: Grid scan position during initial iteration.
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
+- **hacks**:``unknown``
 
 ### ``itr``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: ``python list`` 
+- **content**: Container for iteration specific readouts. Will have as many entries as [``iterations``](#itr-iteration) have been specified int he sequence.
+- **source**: ``Common knowledge``
+- **hacks**: ``unknown``
 
 ### ``sky``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``
+- **content**: The maximum number of repetitions taken to localize the emitter. Limited by the [``stickiness``](#stickiness) parameter. This value is recorded per trajectory. 
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: As surpassing the [``stickiness``](#stickiness) threshold is a breaking condition for tracking photon burst events, it is useful for checking this condition in your data and adjusting filters.
 
 ### ``sqi``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Probably any positive ``integer``. Observed ``0``.
+- **content**: ``unknown``
+- **source**: ``unknown``
+- **hacks**: ``unknown``
 
 ### ``tid``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``.
+- **content**: The ``track-id (tid) `` is given to each sucessfully concluded photon burst trace. Localizations with the same ``tid`` are recorded for the "same" photon burst event. This is however **NOT** a valid measure to separate single particles, as they can be recorded in continuation under one single ``tid``.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: Can be used in paraview for color coding or for fundamental track separation in post. 
 
 ### ``tim``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``float``.
+- **content**: States the time in seconds of sucessful position estimation relative to the point in time the measurement has been started. 
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``vld``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: ``Boolean``
+- **content**: States the validity of the estimated position.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**:  Usually, only valid localizations are exported (checkbox in Imspector). However, non-valid localizations can be used to DEBUG the system. As the value is given per localization, it is an easy filter parameter.
 
 ## ``itr`` (iteration)
 
 ### ``cfr``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``float``.
+- **content**: The ``center-frequency-ratio (cfr)`` calculated for the current iteration. This filed is only filled if the [``ccrLimit``](#ccrlimit) is set to a positive value, which enables the scan in the center of the TCP.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: As the ccr check is triggered after the scan for photons but before the localization has beed updated, it is essentially useless in the last iterations of tracking applications since particles are constantly in motion.
 
 ### ``dcr``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``float`` $\in [0.0, 1.0]$.
+- **content**: The ``detector-count-ratio (dcr)`` between two detenction channels. It is calcuated as follow:
+  $$
+  \text{dcr} = \frac{\text{ECO}_1}{\text{ECO}_1+ \text{ECO}_2}
+  $$
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: Can be used to determine the emission ratio of each dye per localization. 
 
 ### ``dmz``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Beam deflection parameter. Probably deformable mirror Z-deflection.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: Can probably be used to troubleshoot or debug 3D applications.
 
 ### ``ecc``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``.
+- **content**: The ``effective-count-(at)-center (ecc)`` states the sum of photons collected during the center scan. It is only calculated and expressed in case the [ccrLimit](#ccrlimit) is given a positive value.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknwon``
 
 ### ``eco``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``.
+- **content**: The ``effective-count-(at)-offset (eco)`` states the sum of photons collected during all TCP cycles.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknwon``
 
 ### ``efc``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``float``.
+- **content**: The ``effective-frequency-(at)-center (efc)`` states the emission frequency of photons collected during the center scan. It is only calculated and expressed in case the [ccrLimit](#ccrlimit) is given a positive value. It is calculated as follows: 
+  $$
+  \text{EFC}=\frac{\text{ECC}}{o \cdot t_{dwell}}
+  $$
+  With $o$ being the [ctrDwellFactor](#ctrdwellfactor).
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: Can be used to filter out multiple emitters in close space for imaging applications in post. Can also be used to determine the number of cycles used to debug the system.
 
 ### ``efo``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
-
+- **value**: Any positive ``float``.
+- **content**: The ``effective-frequency-(at)-offset (efo)`` states the total emission frequency of photons collected during all TCP cycles. It is calculated as follows: 
+  $$
+  \text{EFO}=\frac{\text{ECO}}{k \cdot t_{dwell}}
+  $$
+  With $k$ being the number of TCP cycles used.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: Can be used to filter out multiple emitters in close space for imaging applications in post. Can also be used to determine the number of cycles used to debug the system.
+ 
 ### ``eox``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Beam deflection parameter. Probably EOD offset in X-direction. 
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``eoy``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Beam deflection parameter. Probably EOD offset in Y-direction. 
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``ext``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: 
+  ```python
+  [float, float, float]
+  ```
+- **content**: TCP extend. It is unclear if it is just the diameter or the extend in XYZ. As of now, no asymmetric TCPs are known.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``fbg``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Photon detection frequency of the background. Only determined if [bgcSense](#bgcsense) is enabled.
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
+- **hacks**: ``unknown``
 
 ### ``gvx``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Beam deflection parameter. Probably Galvo offset in X-direction. 
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``gvy``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Beam deflection parameter. Probably Galvo offset in Y-direction. 
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``itr``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer`` $\in[0,\text{num}_{iterations})$
+- **content**: Iteration ID. Only the last one will retrun a localization.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``lcx``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Deflection parameter of ``unknown`` relevance.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``lcy``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**: Deflection parameter of ``unknown`` relevance.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``lcz``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any ``float``.
+- **content**:  Deflection parameter of ``unknown`` relevance.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
 ### ``lnc``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: 
+  ```python
+  [float, float, float]
+  ```
+- **content**: Uncoreccted localization estimate in meters. Entries correspond to XYZ with a biased estimator.
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
+- **hacks**: ``unknown``
 
 ### ``loc``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: 
+  ```python
+  [float, float, float]
+  ```
+- **content**: Coreccted localization estimate in meters. Entries correspond to XYZ after the estimator has been *unbiased*. Will only be produced by the last iteration.
+- **source**: ``Known``
+- **hacks**: ``unknown``
 
 ### ``sta``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Probably any ``integer``. ``0`` has been observed.
+- **content**: Status. This probably corresponds to a catalog of Error messages used to DEBUG.
+- **source**: Jonatan Alvelid (Personal communication, Jan 2024)
+- **hacks**: ``unknown``
 
 ### ``tic``
-- **value**:
-- **effect**:
-- **source**:
-- **hacks**:
+- **value**: Any positive ``integer``.
+- **content**: A parameter of the used FPGA. Probably the internal clock tic.
+- **source**: Talk @SciLifeLab (Abberior, Oct 2023)
+- **hacks**: ``unknown``
 
