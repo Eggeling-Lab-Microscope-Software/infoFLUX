@@ -590,7 +590,7 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
   ```python
   [float, float, float]
   ```
-- **content**: Uncoreccted localization estimate in meters. Entries correspond to XYZ without correction. Will only be produced by the last iteration.
+- **content**: Uncoreccted localization estimate in meters. Entries correspond to XYZ without beamline-monitoring-correction. Will only be produced by the last iteration.
 - **source**: 
   - Jonatan Alvelid (Personal communication, Jan 2024)
 - **hacks**: ``unknown``
@@ -600,8 +600,9 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
   ```python
   [float, float, float]
   ```
-- **content**: Corrected localization estimate in meters. Entries correspond to XYZ after correction. Will only be produced by the last iteration.
+- **content**: Corrected localization estimate in meters. Entries correspond to XYZ after beamline-monitoring-correction. Will only be produced by the last iteration.
 - **source**: 
+  - Jonatan Alvelid (Personal communication, Jan 2024)
   - Bela Vogler
 - **hacks**: ``unknown``
 
