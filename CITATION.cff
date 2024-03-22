@@ -4,7 +4,15 @@ authors:
 - family-names: "Vogler"
   given-names: "Bela Tristan Leander"
   orcid: "https://orcid.org/0000-0002-5598-5738"
+- family-names: "Reina"
+  given-names: "Francesco"
+  orcid: "https://orcid.org/0000-0001-6752-9089"
+- family-names: "Alvelid"
+  given-names: "Jonatan"
+  orcid: "https://orcid.org/0000-0002-3554-9322"
+- family-names: "Koerfer"
+  given-names: "Agnes"
 title: "infoFLUX"
-version: 0.9.2
-date-released: 2024-03-21
+version: 0.9.3
+date-released: 2024-03-22
 url: "https://github.com/Eggeling-Lab-Microscope-Software/infoFLUX"
