@@ -1,8 +1,16 @@
 # infoFLUX <!-- omit from toc -->
 A compilation of all knowledge I can find on the technical side of MINFLUX.
 
-## Using *infoFLUX*
+Jump right into it: [Gimme infoFLUX...](#minflux-sequence-parameters)
+
+## Using *infoFLUX* <!-- omit from toc -->
 You are welcome to use and contribute to infoFLUX following the guidelines presented below. Should you use the contents of this repository, **please cite *infoFLUX* and its contributors accordingly.**
+
+## Building a community <!-- omit from toc -->
+*infoFLUX* tries to build a community around the MINFLUX technology. We aim to provide a platform for discussions and knowledge exchange. Should you have any questions, observations, or hacks, please, feel free to share them with us. We are happy to include your contributions in this repository.
+
+To this end, check out the [discussion portal](https://github.com/Eggeling-Lab-Microscope-Software/infoFLUX/discussions) and start a new thread. We are looking forward to hearing from you.
+
 
 ## What is to come ? <!-- omit from toc -->
 ### In general
@@ -34,12 +42,18 @@ To all the experienced users that might come across this repository; **Please, s
 
 ## How to contribute:
 ### Contribution Policy (Content)
-This is a community project without a validating insitution, as of now. Any contribution will have to be **opened as an issue first** and will be implemented only after screening and discussion.  
+This is a community project without a validating insitution, as of now. Any contribution will have to be **opened as an issue first** and will be implemented only after screening and discussion. Please, keep in mind that this is a scientific project and that all contributions will be held against the scientific standard. 
 
-In general, should you come across any information that collides with your experience, observations or knowledge, we are happy to hear from you. **Please, open an issue and fill the following template.**
+#### Adding new content
+This repository aims to gather a broad spectrum of knowledge on the Abberior GmbH MINFLUX units. We welcome any contribution that is based on personal experience, data, or knowledge that is not yet listed in the repository. You can add new content by opening an issue in which you make a text based contribution, or by opening a pull request with the new content.
 
-In case of typos or other minor contributions, please, open a pull request and it will be implemented shortly. 
-### Template (temporary)
+#### Editing existing content
+In general, should you come across any information that collides with your experience, observations or knowledge, we are happy to hear from you. **Please, open an issue and fill the following [template](#template-editory).**
+
+#### Formatting
+In case of typos or other minor corrections, please, open a pull request and it will be implemented shortly. 
+
+### Template (Editory)
 ```markdown
 # SUBJECT: The parameter in question.
 # Main:
@@ -56,7 +70,7 @@ In case of typos or other minor contributions, please, open a pull request and i
 *In here go all the creative ways you found to utilize the parameter in question for your own measurements, i.e. you found a way to make use of the changed behavior beyond the intended use. This is especially interest in the light of 'unlocking' the system.*
 ```
 
-# Table of Contentes <!-- omit from toc -->
+# Table of Contents <!-- omit from toc -->
 - [MINFLUX sequence parameters](#minflux-sequence-parameters)
   - [Global parameters](#global-parameters)
   - [``Itr`` (Iteration)](#itr-iteration)
