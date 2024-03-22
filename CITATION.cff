@@ -10,8 +10,6 @@ authors:
 - family-names: "Alvelid"
   given-names: "Jonatan"
   orcid: "https://orcid.org/0000-0002-3554-9322"
-- family-names: "Koerfer"
-  given-names: "Agnes"
 title: "infoFLUX"
 version: 0.9.3
 date-released: 2024-03-22
