@@ -630,7 +630,6 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 |code|status|
 |:-:|:-:|
 |0|passed without error|
-|???| failed |
 |...|...|
 
 </div>
