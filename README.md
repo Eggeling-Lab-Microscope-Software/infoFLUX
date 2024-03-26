@@ -1,9 +1,10 @@
 # infoFLUX <!-- omit from toc -->
-A compilation of all knowledge I can find on the technical side of MINFLUX.
+A compilation of all knowledge I can find on the technical side of MINFLUX.<br>
+As always, you can show your appreciation by **leaving a star**.
 
-[![MD](https://img.shields.io/badge/Here-Jump%20right%20in-purple)](#minflux-sequence-parameters) 
+[![MD](https://img.shields.io/badge/Link-Jump%20right%20in-purple)](#minflux-sequence-parameters) 
 
-[![HTML](https://img.shields.io/badge/HTML-Light%20%20%20Mode-orange)](https://eggeling-lab-microscope-software.github.io/infoFLUX/)
+[![HTML](https://img.shields.io/badge/Link-Get%20the%20HTML-orange)](https://eggeling-lab-microscope-software.github.io/infoFLUX/)
 
 ## Share *infoFLUX* <!-- omit from toc -->
 
