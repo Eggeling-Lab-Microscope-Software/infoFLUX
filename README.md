@@ -1,7 +1,9 @@
 # infoFLUX <!-- omit from toc -->
 A compilation of all knowledge I can find on the technical side of MINFLUX.
 
-Jump right into it: [Gimme infoFLUX...](#minflux-sequence-parameters)
+You can either explore the contents of the markdown file below in dark mode, or should you be on the phone, enjoy the [light mode](https://eggeling-lab-microscope-software.github.io/infoFLUX/).
+
+Jump right into it: [Gimme parameters...](#minflux-sequence-parameters)
 
 ## Using *infoFLUX* <!-- omit from toc -->
 You are welcome to use and contribute to infoFLUX following the guidelines presented below. Should you use the contents of this repository, **please cite *infoFLUX* and its contributors accordingly.**
