@@ -286,16 +286,16 @@ $$CFR = \frac{EFC\space[Hz]}{EFO\space[Hz]}$$
   $$\text{TCP diameter} = \text{patGeoFactor} \cdot 360\text{nm}$$
   * The following values are known to be used in tracking:
 
-<center>
+<div align="center">
 
 |``patGeoFactor``|Diameter|Usecase
-|----|------|------------|
+|:-:|:-:|:-:|
 |0.11|40 nm |2D imaging  |
 |0.28|100 nm|2D tracking |
 |0.42|150 nm|2D tracking |
 |...|...|...|
 
-</center>
+</div>
 
 - **source**: 
   - Abberior GmbH (personal communication, 2022)
@@ -625,15 +625,15 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 - **value**: Probably any ``integer`` that corresponds to a certain status. ``0`` has been observed for valid localizations.
 - **content**: Status. This probably corresponds to a catalog of  messages used to DEBUG. From the observed values, it is unclear if the status is a boolean or a categorical variable. However, given the programmatic convention of passing with an error code of ``0``, it is likely a categorical variable.
 
-<center>
+<div align="center">
 
 |code|status|
-|----|------|
+|:-:|:-:|
 |0|passed without error|
 |???| failed |
 |...|...|
 
-</center>
+</div>
 
 - **source**: 
   - Jonatan Alvelid (Personal communication, Jan 2024)
