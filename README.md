@@ -476,9 +476,11 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 ### ``dcr``
 - **value**: Any positive ``float`` $\in [0.0, 1.0]$.
 - **content**: The ``detector-count/channel-ratio (dcr)`` between two detenction channels. It is calcuated as follow:
+  
   $$
   \text{dcr} = \frac{\text{ECO}_1}{\text{ECO}_1+ \text{ECO}_2}
   $$
+
 - **source**: 
   - Talk @SciLifeLab (Abberior, Oct 2023)
 - **hacks**: Can be used to determine the emission ratio of each dye per localization. 
