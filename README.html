@@ -562,7 +562,10 @@ We suspect that the parameter accounts for overshoot during TCP center updates b
 </ul>
 <section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>TCP diameter</mtext><mo>=</mo><mtext>patGeoFactor</mtext><mo>⋅</mo><mn>360</mn><mtext>nm</mtext></mrow><annotation encoding="application/x-tex">\text{TCP diameter} = \text{patGeoFactor} \cdot 360\text{nm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">TCP diameter</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">patGeoFactor</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">360</span><span class="mord text"><span class="mord">nm</span></span></span></span></span></span></eqn></section></math>
 <ul>
-<li>The following values are known to be used in tracking:
+<li>The following values are known to be used in tracking:</li>
+</ul>
+</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -587,11 +590,14 @@ We suspect that the parameter accounts for overshoot during TCP center updates b
 <td>150 nm</td>
 <td>2D tracking</td>
 </tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
 </tbody>
 </table>
-</li>
-</ul>
-</li>
+<ul>
 <li><strong>source</strong>:
 <ul>
 <li>Abberior GmbH (personal communication, 2022)</li>
@@ -1054,7 +1060,8 @@ With <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.
 <h3 id="sta"><code>sta</code></h3>
 <ul>
 <li><strong>value</strong>: Probably any <code>integer</code> that corresponds to a certain status. <code>0</code> has been observed for valid localizations.</li>
-<li><strong>content</strong>: Status. This probably corresponds to a catalog of  messages used to DEBUG. From the observed values, it is unclear if the status is a boolean or a categorical variable. However, given the programmatic convention of passing with an error code of <code>0</code>, it is likely a categorical variable.
+<li><strong>content</strong>: Status. This probably corresponds to a catalog of  messages used to DEBUG. From the observed values, it is unclear if the status is a boolean or a categorical variable. However, given the programmatic convention of passing with an error code of <code>0</code>, it is likely a categorical variable.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -1067,9 +1074,17 @@ With <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.
 <td>0</td>
 <td>passed without error</td>
 </tr>
+<tr>
+<td>???</td>
+<td>failed</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
 </tbody>
 </table>
-</li>
+<ul>
 <li><strong>source</strong>:
 <ul>
 <li>Jonatan Alvelid (Personal communication, Jan 2024)</li>
