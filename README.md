@@ -108,7 +108,9 @@ Default values have been extracted from the `Tracking_2D_Oct2022` sequence. And 
 ### ``damping``
 - **default**: 2
 - **value**: any ``integer`` (tested 0-2)
-- **effect**: Limits the distance travelled during localization update according to the following equation $$\Delta_{update}=\Delta_{real}\cdot2^{-\text(damping)}$$We suspect that the parameter accounts for overshoot during TCP center updates by the galvo mirrors. Setting it to ``0`` will disable the feature. While having it at ``2`` proves to be difficult when tracking faster particles, ``1`` seems to be a good compromise between speed and accuracy.
+- **effect**: Limits the distance travelled during localization update according to the following equation: 
+  $$\Delta_{update}=\Delta_{real}\cdot2^{-\text(damping)}$$ 
+  We suspect that the parameter accounts for overshoot during TCP center updates by the galvo mirrors. Setting it to ``0`` will disable the feature. While having it at ``2`` proves to be difficult when tracking faster particles, ``1`` seems to be a good compromise between speed and accuracy.
 - **source**: 
   - Abberior Instruments GmbH (personal communication, 2022)
   - Bela Vogler
@@ -202,9 +204,7 @@ Default values have been extracted from the `Tracking_2D_Oct2022` sequence. And 
 - **value**: any positive ``float`` and ``-1`` for the **off**-state.
 - **effect**: If a positive value is passed, a center freqency check is perfomed, i.e. the *TCP* is added a final scanning spot in the geometrical center at which photons are collected during the final step of the current iteration. Any passed ``float`` value will be treated as an upper limit to the *Center Frequency Ratio* (``CFR``). When surpassed, the current track is terminated and the system will start scaning for other emitters to follow. <br> Enabling the CCR-scan provides the ``CFR`` as well as the *Effective Frequency at the center* (``EFC``) that is the emission frequency measured at the center in addition to the generally collected *Effective Frequency Offset* (``EFO``), i.e. the sum of all collected photons at the *TCP* spots. The ``CFR`` is calculated as follows: 
   
-$$ 
-CFR = \frac{EFC\space[Hz]}{EFO\space[Hz]}
-$$
+$$CFR = \frac{EFC\space[Hz]}{EFO\space[Hz]}$$
 
 - **source**: 
   - Roman Schmidt (Personal Communication, E-Mail, Jan 2024)
@@ -475,12 +475,8 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 
 ### ``dcr``
 - **value**: Any positive ``float`` $\in [0.0, 1.0]$.
-- **content**: The ``detector-count/channel-ratio (dcr)`` between two detenction channels. It is calcuated as follow:
-  
-  $$
-  \text{dcr} = \frac{\text{ECO}_1}{\text{ECO}_1+ \text{ECO}_2}
-  $$
-
+- **content**: The ``detector count/channel ratio (dcr)`` between two detenction channels. It is calcuated as follow:
+  $$\text{dcr} = \frac{\text{ECO}_1}{\text{ECO}_1+ \text{ECO}_2}$$
 - **source**: 
   - Talk @SciLifeLab (Abberior, Oct 2023)
 - **hacks**: Can be used to determine the emission ratio of each dye per localization. 
@@ -509,9 +505,7 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 ### ``efc``
 - **value**: Any positive ``float``.
 - **content**: The ``effective-frequency-(at)-center (efc)`` states the emission frequency of photons collected during the center scan. It is only calculated and expressed in case the [ccrLimit](#ccrlimit) is given a positive value. It is calculated as follows: 
-  $$
-  \text{EFC}=\frac{\text{ECC}}{o \cdot t_{dwell}}
-  $$
+  $$\text{EFC}=\frac{\text{ECC}}{o \cdot t_{dwell}}$$
   With $o$ being the [ctrDwellFactor](#ctrdwellfactor).
 - **source**: 
   - Talk @SciLifeLab (Abberior, Oct 2023)
@@ -520,9 +514,7 @@ As MINFLUX 3D is controlled by iterating sequences built from nested ``key:value
 ### ``efo``
 - **value**: Any positive ``float``.
 - **content**: The ``effective-frequency-(at)-offset (efo)`` states the total emission frequency of photons collected during all TCP cycles. It is calculated as follows: 
-  $$
-  \text{EFO}=\frac{\text{ECO}}{k \cdot t_{dwell}}
-  $$
+  $$\text{EFO}=\frac{\text{ECO}}{k \cdot t_{dwell}}$$
   With $k$ being the number of TCP cycles used.
 - **source**: 
   - Talk @SciLifeLab (Abberior, Oct 2023)
