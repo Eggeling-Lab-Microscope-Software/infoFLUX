@@ -213,10 +213,19 @@ aside > *:last-child {
         
         </head>
         <body class="vscode-body vscode-light">
-            <h1 id="infoflux-">infoFLUX <!-- omit from toc --></h1>
+            <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+<h1 id="infoflux-">infoFLUX <!-- omit from toc --></h1>
 <p>A compilation of all knowledge I can find on the technical side of MINFLUX.</p>
-<p>You can either explore the contents of the markdown file below in dark mode, or should you be on the phone, enjoy the <a href="https://eggeling-lab-microscope-software.github.io/infoFLUX/">light mode</a>.</p>
-<p>Jump right into it: <a href="#minflux-sequence-parameters">Gimme parameters...</a></p>
+<p><a href="#minflux-sequence-parameters"><img src="https://img.shields.io/badge/Here-Jump%20right%20in-purple" alt="MD"></a></p>
+<p><a href="https://eggeling-lab-microscope-software.github.io/infoFLUX/"><img src="https://img.shields.io/badge/HTML-Light%20%20%20Mode-orange" alt="HTML"></a></p>
+<h2 id="share-infoflux-">Share <em>infoFLUX</em> <!-- omit from toc --></h2>
+<img src="file:///c:\Users\work\Documents\GitHub\infoFLUX\media\infoFLUX_QR.png" alt="share_QR" width="200" height="200"/>
 <h2 id="using-infoflux-">Using <em>infoFLUX</em> <!-- omit from toc --></h2>
 <p>You are welcome to use and contribute to infoFLUX following the guidelines presented below. Should you use the contents of this repository, <strong>please cite <em>infoFLUX</em> and its contributors accordingly.</strong></p>
 <h2 id="building-a-community-">Building a community <!-- omit from toc --></h2>
@@ -556,18 +565,19 @@ We suspect that the parameter accounts for overshoot during TCP center updates b
 </ul>
 <h3 id="patgeofactor"><code>patGeoFactor</code></h3>
 <ul>
-<li><strong>value</strong>: any positive <code>float</code> value.</li>
-<li><strong>effect</strong>: Controls the TCP diameter.
+<li>
+<p><strong>value</strong>: any positive <code>float</code> value.</p>
+</li>
+<li>
+<p><strong>effect</strong>: Controls the TCP diameter.</p>
 <ul>
 <li>The used diameter caluclates as follows:</li>
 </ul>
 <section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>TCP diameter</mtext><mo>=</mo><mtext>patGeoFactor</mtext><mo>⋅</mo><mn>360</mn><mtext>nm</mtext></mrow><annotation encoding="application/x-tex">\text{TCP diameter} = \text{patGeoFactor} \cdot 360\text{nm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">TCP diameter</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">patGeoFactor</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">360</span><span class="mord text"><span class="mord">nm</span></span></span></span></span></span></eqn></section></math>
 <ul>
-<li>The following values are known to be used in tracking:</li>
-</ul>
-</li>
-</ul>
-<table class="center">
+<li>
+<p>The following values are known to be used in tracking:</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:center"><code>patGeoFactor</code></th>
@@ -598,13 +608,18 @@ We suspect that the parameter accounts for overshoot during TCP center updates b
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong>source</strong>:
+</li>
+</ul>
+</li>
+<li>
+<p><strong>source</strong>:</p>
 <ul>
 <li>Abberior GmbH (personal communication, 2022)</li>
 </ul>
 </li>
-<li><strong>hacks</strong>: A smaller TCP forces a smaller area of photon collection thereby limiting the spatial localization error. However, the risk of losing any non fixated particles rises significantly with smaller collection-tolerances.</li>
+<li>
+<p><strong>hacks</strong>: A smaller TCP forces a smaller area of photon collection thereby limiting the spatial localization error. However, the risk of losing any non fixated particles rises significantly with smaller collection-tolerances.</p>
+</li>
 </ul>
 <h3 id="patrepeat"><code>patRepeat</code></h3>
 <ul>
@@ -1060,10 +1075,12 @@ With <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.
 </ul>
 <h3 id="sta"><code>sta</code></h3>
 <ul>
-<li><strong>value</strong>: Probably any <code>integer</code> that corresponds to a certain status. <code>0</code> has been observed for valid localizations.</li>
-<li><strong>content</strong>: Status. This probably corresponds to a catalog of  messages used to DEBUG. From the observed values, it is unclear if the status is a boolean or a categorical variable. However, given the programmatic convention of passing with an error code of <code>0</code>, it is likely a categorical variable.</li>
-</ul>
-<table class="center"> 
+<li>
+<p><strong>value</strong>: Probably any <code>integer</code> that corresponds to a certain status. <code>0</code> has been observed for valid localizations.</p>
+</li>
+<li>
+<p><strong>content</strong>: Status. This probably corresponds to a catalog of  messages used to DEBUG. From the observed values, it is unclear if the status is a boolean or a categorical variable. However, given the programmatic convention of passing with an error code of <code>0</code>, it is likely a categorical variable.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:center">code</th>
@@ -1081,14 +1098,17 @@ With <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong>source</strong>:
+</li>
+<li>
+<p><strong>source</strong>:</p>
 <ul>
 <li>Jonatan Alvelid (Personal communication, Jan 2024)</li>
 <li>Bela Vogler</li>
 </ul>
 </li>
-<li><strong>hacks</strong>: <code>unknown</code></li>
+<li>
+<p><strong>hacks</strong>: <code>unknown</code></p>
+</li>
 </ul>
 <h3 id="tic"><code>tic</code></h3>
 <ul>
