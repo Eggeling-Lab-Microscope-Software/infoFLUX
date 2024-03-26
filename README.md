@@ -1,12 +1,3 @@
-<style>
-  img {
-    display: block;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
-
 # infoFLUX <!-- omit from toc -->
 A compilation of all knowledge I can find on the technical side of MINFLUX.
 
@@ -16,7 +7,7 @@ A compilation of all knowledge I can find on the technical side of MINFLUX.
 
 ## Share *infoFLUX* <!-- omit from toc -->
 
-<img src="media\infoFLUX_QR.png" alt="share_QR" width="200" height="200" pointer-events=none/>
+<img src="media\infoFLUX_QR.png" alt="share_QR" width="200" height="200"/>
 
 ## Using *infoFLUX* <!-- omit from toc -->
 You are welcome to use and contribute to infoFLUX following the guidelines presented below. Should you use the contents of this repository, **please cite *infoFLUX* and its contributors accordingly.**
